@@ -4,7 +4,7 @@ OS=$(uname -s)
 
 fix_my_prompt() {
 	curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | /bin/sh
-	sed -i - "s/robbyrussell/steeef/g" "$HOME/.zshrc"
+	sed -i "s/robbyrussell/steeef/g" "$HOME/.zshrc" | echo ""
 	rm -f "$HOME/.zshrc-"
 	echo 'plugins=(git)' >> "$HOME/.zshrc"
 	echo 'source $HOME/.oh-my-zsh/oh-my-zsh.sh' >> "$HOME/.zshrc"
